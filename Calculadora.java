@@ -14,7 +14,7 @@ public class Calculadora
     {
 
     }
-    
+
     /**
      *  imprima todos los múltiplos de 5 entre 10 y 95 (ambos extremos no incluidos) 
      */
@@ -22,11 +22,11 @@ public class Calculadora
         int num =  15;
         while(num < 95){
             System.out.println(num);
-            num = num + MULTI;
+            num = num + MULTI;  //MULTI es una variable con valor = 5
         }
-                    System.out.println();
+        System.out.println();
     } 
-    
+
     /**
      * saque por pantalla la suma de los números comprendidos entre el 0 y el 10 (ambos incluidos) haciendo uso de 
      * un bucle while 
@@ -39,31 +39,38 @@ public class Calculadora
             System.out.println(cont+ " : " +suma);
             cont ++;
         }
-                    System.out.println();
+        System.out.println();
     }
+
+    /**
+     *  que reciba dos parámetros enteros a y b y devuelva la suma de los valores comprendidos entre dichos 
+     *  parámetros (ambos incluidos) 
+     */
+    public int sumValuesInterval(int num1, int num2){
+        int num0 = 0;
+        int sol = 0;
+
+        if(num1 > num2){
+            num0 = num1;  
+            num1 = num2;   
+            num2 = num0;
+        }
+
+        if( num1 < 0 || num2 < 0 ){
+            sol = -1;
+            System.out.println("Error, tenemos un valor negativo. ");
+        }
+        else{
+            int cont = num1;
+            while(cont <= num2){
+                sol = sol + cont;
+                cont ++;
+            }
+        }
+        return sol;
+    } 
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
