@@ -49,13 +49,11 @@ public class Calculadora
     public int sumValuesInterval(int num1, int num2){
         int num0 = 0;
         int sol = 0;
-
         if(num1 > num2){
             num0 = num1;  
             num1 = num2;   
             num2 = num0;
         }
-
         if( num1 < 0 || num2 < 0 ){
             sol = -1;
             System.out.println("Error, tenemos un valor negativo. ");
@@ -70,9 +68,28 @@ public class Calculadora
         return sol;
     } 
 
+    /**
+     * que devuelva verdadero si el parámetro n es primo o falso en caso contrario
+     * Debes usar un bucle while que divida el número entre todos los valores comprendidos entre 2 y (n -1). Si alguna 
+     * de estas divisiones da de resto 0, entonces el número no es primo. Se debe comprobar que el parámetro es mayor que 1;
+     * en caso contrario se informa por pantalla del error y se devuelve false
+     */
+    public boolean isPrime(int n){
+        int cont = 2;
+        boolean primo = true;
+
+        if(n < 2){
+            System.out.println("Erro, nº menor de 2. ");
+            primo = false;
+        }
+        while(cont < n){
+            if(n % cont == 0){
+                primo = false;
+            }
+            cont ++;
+        }
+        return primo;
+    }
+
 }
-
-
-
-
 
