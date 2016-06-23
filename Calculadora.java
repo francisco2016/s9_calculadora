@@ -8,14 +8,6 @@ public class Calculadora
     public static final  int MULTI = 5;
 
     /**
-     * Constructor for objects of class Calculadora
-     */
-    public Calculadora()
-    {
-
-    }
-
-    /**
      *  imprima todos los múltiplos de 5 entre 10 y 95 (ambos extremos no incluidos) 
      */
     public void multiplesOfFive(){
@@ -90,6 +82,43 @@ public class Calculadora
         }
         return primo;
     }
-
+    
+    /**
+     * realizar multiplicaciones entre enteros positivos. Debes decidir por ti mismo qué parámetros debe recibir 
+     * dicho método. El método devuelve un valor de tipo entero. Se pone como condición que para realizarlo solo
+     * se pueden emplear las operaciones matemáticas suma y resta, no estando permitido usar ninguna otra 
+     * operación matemática. Si los parámetros no son enteros positivos el método deben devolver -1 e informar
+     * por pantalla del error. 
+     */
+    public int productoConSumas(int n1, int n2){
+        int sol = 0;
+        int cont = 1;
+        if(n1 < 0 || n2 < 0){
+            System.out.println("Error, nº negativo a la vista.");
+            sol = -1;
+        }
+        else{
+            while(cont <= n1){
+                sol = sol +n2;
+                cont ++;
+            }
+        }
+        return sol;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
